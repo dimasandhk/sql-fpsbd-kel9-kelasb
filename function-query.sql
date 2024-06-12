@@ -23,3 +23,23 @@ BEGIN
 END;
 $$
 DELIMITER ;
+
+------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE FUNCTION totalTimePlayed(inp_id INT) 
+RETURNS INT
+BEGIN
+    DECLARE total_time INT;
+    
+    SELECT SUM(time_played) INTO total_time
+    FROM library
+    WHERE user_id = inp_id;
+    
+    RETURN IFNULL(total_time, 0);
+END;
+$$
+DELIMITER ;
+
+------------------------------------------------------------
