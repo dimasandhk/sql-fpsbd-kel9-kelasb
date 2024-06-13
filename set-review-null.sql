@@ -1,0 +1,10 @@
+DELIMITER //
+
+CREATE TRIGGER set_ovr_reviews_null
+BEFORE INSERT ON game
+FOR EACH ROW
+BEGIN
+    SET NEW.ovr_reviews = NULL;
+END//
+
+DELIMITER ;
