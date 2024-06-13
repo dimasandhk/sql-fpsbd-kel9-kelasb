@@ -27,12 +27,13 @@ JOIN genre ON genre.genre_id = game_genres.genre_id;
 ----------------------------------------------------------------------------------------------
 
 CREATE VIEW `adult_rating` AS
+CREATE VIEW `adult_rating` AS
 SELECT 
     g.title AS game_title,
     d.dev_name AS developer_name,
     g.release_date,
     g.ovr_reviews,
-    g.price,
+    printInt(CAST(g.price AS INT), 'price') AS formatted_price,
     g.description,
     sr.min_os,
     sr.min_processor,
