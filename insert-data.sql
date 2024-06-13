@@ -1,89 +1,229 @@
-INSERT INTO user_steam (username, email, password, date_of_birth, balance, country) VALUES
-('gamer1', 'gamer1@example.com', 'password1', '1990-01-01', 50.00, 'USA'),
-('gamer2', 'gamer2@example.com', 'password2', '1992-02-02', 75.50, 'Canada'),
-('gamer3', 'gamer3@example.com', 'password3', '1988-03-03', 100.00, 'UK'),
-('gamer4', 'gamer4@example.com', 'password4', '1995-04-04', 200.00, 'Australia'),
-('gamer5', 'gamer5@example.com', 'password5', '1998-05-05', 150.75, 'Germany'),
-('gamer6', 'gamer6@example.com', 'password6', '1991-06-06', 120.20, 'France'),
-('gamer7', 'gamer7@example.com', 'password7', '1993-07-07', 80.00, 'Japan');
+INSERT INTO user_steam (username, email, password, date_of_birth, balance, country)
+VALUES 
+('alice_wonder', 'alice@example.com', 'securePass1!', '1995-02-20', 100.50, 'Canada'),
+('bob_builder', 'bob@example.com', 'b0bTh3Bui1d3r', '1988-08-12', 150.75, 'UK'),
+('charlie_day', 'charlie@example.com', 'sunnyInPhilly', '1990-01-15', 200.00, 'USA'),
+('dana_scully', 'dana@example.com', 'trustNo1', '1985-07-23', 50.00, 'USA'),
+('eve_online', 'eve@example.com', 'space4Ever', '1993-05-10', 300.00, 'Iceland'),
+('frank_reynolds', 'frank@example.com', 'warthog', '1944-11-17', 500.00, 'USA'),
+('george_jetson', 'george@example.com', 'futureBoy', '1962-04-12', 75.00, 'USA'),
+('hannah_montana', 'hannah@example.com', 'doubleLife', '1992-11-23', 120.00, 'USA'),
+('ivan_drago', 'ivan@example.com', 'russianBear', '1975-01-07', 60.00, 'Russia'),
+('jack_sparrow', 'jack@example.com', 'blackPearl', '1980-06-09', 90.00, 'Bahamas'),
+('kate_aus', 'kate@example.com', 'lostIsland', '1985-08-21', 140.00, 'Australia'),
+('lucas_skywalker', 'lucas@example.com', 'jediMaster', '1977-05-25', 180.00, 'USA'),
+('mike_tyson', 'mike@example.com', 'ironMike', '1966-06-30', 320.00, 'USA'),
+('nancy_drew', 'nancy@example.com', 'sleuth101', '1991-07-03', 110.00, 'USA'),
+('oscar_the_grouch', 'oscar@example.com', 'trashKing', '1969-11-10', 50.00, 'USA'),
+('peter_parker', 'peter@example.com', 'spidey', '1995-08-10', 220.00, 'USA'),
+('quentin_quirke', 'quentin@example.com', 'quirkyQ', '1989-12-13', 150.00, 'UK'),
+('rachel_green', 'rachel@example.com', 'fashionista', '1969-05-05', 130.00, 'USA'),
+('steve_jobs', 'steve@example.com', 'appleMan', '1955-02-24', 5000.00, 'USA'),
+('tony_stark', 'tony@example.com', 'ironMan', '1970-05-29', 9999.99, 'USA');
 
-INSERT INTO developer (dev_name) VALUES
-('Valve'),
+INSERT INTO developer (dev_name)
+VALUES 
 ('CD Projekt Red'),
+('Bethesda Game Studios'),
+('Valve Corporation'),
 ('Ubisoft'),
 ('Rockstar Games'),
-('Bethesda'),
-('Blizzard'),
-('Epic Games');
+('Electronic Arts'),
+('Square Enix'),
+('Blizzard Entertainment'),
+('Activision'),
+('Bandai Namco Entertainment'),
+('Capcom'),
+('Insomniac Games'),
+('Naughty Dog'),
+('Santa Monica Studio'),
+('FromSoftware'),
+('Kojima Productions'),
+('Rare'),
+('SEGA'),
+('Konami'),
+('Treyarch');
 
-INSERT INTO system_requirements (min_os, recom_os, min_processor, recom_processor, min_memory, recom_memory, min_graphics, recom_graphics, min_storage, recom_storage) VALUES
-('Windows 7', 'Windows 10', 'Intel Core i3', 'Intel Core i5', 4, 8, 'NVIDIA GTX 660', 'NVIDIA GTX 970', 50, 100),
-('Windows 8', 'Windows 10', 'AMD Ryzen 3', 'AMD Ryzen 5', 8, 16, 'AMD RX 560', 'AMD RX 580', 60, 120),
-('Windows 7', 'Windows 10', 'Intel Core i5', 'Intel Core i7', 8, 16, 'NVIDIA GTX 750', 'NVIDIA GTX 1060', 40, 80),
-('Windows 10', 'Windows 11', 'Intel Core i3', 'Intel Core i7', 8, 16, 'NVIDIA GTX 660', 'NVIDIA RTX 2060', 70, 150),
-('Windows 8', 'Windows 10', 'Intel Core i5', 'Intel Core i9', 8, 16, 'NVIDIA GTX 760', 'NVIDIA GTX 1080', 55, 110),
-('Windows 7', 'Windows 10', 'AMD Ryzen 5', 'AMD Ryzen 7', 8, 16, 'AMD RX 570', 'AMD RX 590', 65, 130),
-('Windows 10', 'Windows 11', 'Intel Core i5', 'Intel Core i9', 16, 32, 'NVIDIA GTX 770', 'NVIDIA RTX 2070', 80, 160);
+INSERT INTO system_requirements (min_os, recom_os, min_processor, recom_processor, min_memory, recom_memory, min_graphics, recom_graphics, min_storage, recom_storage)
+VALUES 
+('Windows 7', 'Windows 10', 'Intel Core i5-3570K', 'Intel Core i7-4790', 8, 16, 'NVIDIA GTX 970', 'NVIDIA GTX 1060', 50, 70),
+('Windows 10', 'Windows 11', 'AMD Ryzen 3 1200', 'AMD Ryzen 5 3600', 8, 16, 'AMD Radeon RX 570', 'AMD Radeon RX 5700', 60, 80),
+('Windows 8', 'Windows 10', 'Intel Core i3-3220', 'Intel Core i5-6600K', 4, 8, 'NVIDIA GTX 660', 'NVIDIA GTX 980', 40, 60),
+('Windows 7', 'Windows 10', 'Intel Core i5-2400', 'Intel Core i7-6700K', 6, 12, 'NVIDIA GTX 760', 'NVIDIA GTX 1080', 45, 70),
+('Windows 8.1', 'Windows 10', 'AMD FX-8350', 'AMD Ryzen 7 2700X', 8, 16, 'AMD Radeon RX 580', 'AMD Radeon RX 5700 XT', 55, 90),
+('Windows 10', 'Windows 11', 'Intel Core i5-8400', 'Intel Core i9-9900K', 8, 16, 'NVIDIA GTX 1070', 'NVIDIA RTX 2070', 70, 100),
+('Windows 7', 'Windows 10', 'Intel Core i3-4160', 'Intel Core i5-4690', 4, 8, 'NVIDIA GTX 750 Ti', 'NVIDIA GTX 970', 35, 60),
+('Windows 10', 'Windows 11', 'AMD Ryzen 5 1400', 'AMD Ryzen 7 3700X', 8, 16, 'AMD Radeon RX 5700', 'AMD Radeon RX 6800', 65, 110),
+('Windows 8', 'Windows 10', 'Intel Core i5-4460', 'Intel Core i7-7700', 6, 12, 'NVIDIA GTX 960', 'NVIDIA GTX 1080 Ti', 55, 85),
+('Windows 10', 'Windows 11', 'AMD Ryzen 3 3200G', 'AMD Ryzen 5 5600X', 8, 16, 'AMD Radeon RX Vega 11', 'AMD Radeon RX 6700 XT', 60, 95),
+('Windows 7', 'Windows 10', 'Intel Core i5-2500K', 'Intel Core i7-3770', 8, 16, 'NVIDIA GTX 760', 'NVIDIA GTX 1060', 50, 80),
+('Windows 8.1', 'Windows 10', 'Intel Core i5-3570', 'Intel Core i7-6700', 8, 16, 'NVIDIA GTX 970', 'NVIDIA GTX 1080', 55, 90),
+('Windows 10', 'Windows 11', 'AMD Ryzen 5 1600', 'AMD Ryzen 7 3800X', 8, 16, 'AMD Radeon RX 580', 'AMD Radeon RX 5700', 70, 110),
+('Windows 8', 'Windows 10', 'Intel Core i3-6100', 'Intel Core i5-7600K', 4, 8, 'NVIDIA GTX 1050', 'NVIDIA GTX 1070', 45, 70),
+('Windows 7', 'Windows 10', 'Intel Core i5-7400', 'Intel Core i7-7700K', 8, 16, 'NVIDIA GTX 1060', 'NVIDIA RTX 2060', 50, 85),
+('Windows 10', 'Windows 11', 'AMD Ryzen 5 2600', 'AMD Ryzen 7 5800X', 8, 16, 'AMD Radeon RX 5500', 'AMD Radeon RX 6700 XT', 60, 100),
+('Windows 8', 'Windows 10', 'Intel Core i3-4170', 'Intel Core i5-4690K', 4, 8, 'NVIDIA GTX 950', 'NVIDIA GTX 1080', 35, 60),
+('Windows 7', 'Windows 10', 'Intel Core i5-3550', 'Intel Core i7-4790K', 8, 16, 'NVIDIA GTX 760', 'NVIDIA GTX 1070', 55, 80),
+('Windows 10', 'Windows 11', 'AMD Ryzen 3 3100', 'AMD Ryzen 5 3600X', 8, 16, 'AMD Radeon RX 570', 'AMD Radeon RX 6800 XT', 70, 105),
+('Windows 8.1', 'Windows 10', 'Intel Core i5-4590', 'Intel Core i7-6700K', 8, 16, 'NVIDIA GTX 970', 'NVIDIA GTX 1080 Ti', 60, 90);
 
-INSERT INTO genre (genre_name) VALUES
-('Action'),
-('Adventure'),
+INSERT INTO genre (genre_name)
+VALUES 
 ('RPG'),
-('Strategy'),
+('Adventure'),
+('Action'),
 ('Simulation'),
+('Strategy'),
+('Puzzle'),
 ('Sports'),
-('Horror');
+('Racing'),
+('Horror'),
+('Shooter'),
+('MMORPG'),
+('Fighting'),
+('Platformer'),
+('Sandbox'),
+('Stealth'),
+('Rhythm'),
+('Survival'),
+('Visual Novel'),
+('Card Game'),
+('Party Game');
 
-INSERT INTO game (dev_id, sysreq_id, title, release_date, ovr_reviews, price, description, age_rest) VALUES
-(1, 1, 'Half-Life 2', '2004-11-16', 'Very Positive', 9.99, 'A first-person shooter game.', 17),
-(2, 2, 'The Witcher 3', '2015-05-19', 'Very Positive', 29.99, 'An open-world RPG game.', 18),
-(3, 3, 'Assassins Creed Valhalla', '2020-11-10', 'Positive', 59.99, 'An action role-playing game.', 17),
-(4, 4, 'Grand Theft Auto V', '2013-09-17', 'Very Positive', 19.99, 'An action-adventure game.', 18),
-(5, 5, 'The Elder Scrolls V: Skyrim', '2011-11-11', 'Very Positive', 39.99, 'An open-world action RPG game.', 17),
-(6, 6, 'Overwatch', '2016-05-24', 'Positive', 39.99, 'A team-based multiplayer shooter.', 13),
-(7, 7, 'Fortnite', '2017-07-25', 'Neutral', 0.00, 'A battle royale game.', 13);
+INSERT INTO game (dev_id, sysreq_id, title, release_date, ovr_reviews, price, description, age_rest)
+VALUES 
+(1, 1, 'Cyberpunk 2077', '2020-12-10', 'Mixed', 59.99, 'An open-world, action-adventure story set in Night City.', 18),
+(2, 2, 'The Elder Scrolls V: Skyrim', '2011-11-11', 'Very Positive', 39.99, 'A legendary open-world RPG.', 18),
+(3, 3, 'Half-Life 2', '2004-11-16', 'Overwhelmingly Positive', 9.99, 'A science fiction first-person shooter game.', 18),
+(4, 4, 'Assassin\'s Creed Valhalla', '2020-11-10', 'Positive', 59.99, 'An open-world action RPG.', 18),
+(5, 5, 'Red Dead Redemption 2', '2018-10-26', 'Very Positive', 59.99, 'An epic tale of life in America’s unforgiving heartland.', 18),
+(6, 6, 'FIFA 21', '2020-10-09', 'Mixed', 49.99, 'A football simulation video game.', 3),
+(7, 7, 'Final Fantasy XV', '2016-11-29', 'Very Positive', 49.99, 'An open-world action RPG.', 13),
+(8, 8, 'Overwatch', '2016-05-24', 'Very Positive', 39.99, 'A team-based multiplayer first-person shooter.', 13),
+(9, 9, 'Call of Duty: Warzone', '2020-03-10', 'Positive', 0.00, 'A free-to-play battle royale video game.', 18),
+(10, 10, 'Dark Souls III', '2016-04-12', 'Very Positive', 59.99, 'An action RPG developed by FromSoftware.', 18),
+(11, 11, 'Resident Evil Village', '2021-05-07', 'Very Positive', 59.99, 'A survival horror game.', 18),
+(12, 12, 'Spider-Man: Miles Morales', '2020-11-12', 'Very Positive', 49.99, 'An action-adventure game based on the Marvel Comics character.', 13),
+(13, 13, 'The Last of Us Part II', '2020-06-19', 'Very Positive', 59.99, 'An action-adventure game.', 18),
+(14, 14, 'God of War', '2018-04-20', 'Very Positive', 49.99, 'An action-adventure game.', 18),
+(15, 15, 'Sekiro: Shadows Die Twice', '2019-03-22', 'Very Positive', 59.99, 'An action-adventure game.', 18),
+(16, 16, 'Death Stranding', '2019-11-08', 'Very Positive', 59.99, 'An action game.', 18),
+(17, 17, 'Sea of Thieves', '2018-03-20', 'Mixed', 39.99, 'An action-adventure game.', 13),
+(18, 18, 'Yakuza: Like a Dragon', '2020-11-10', 'Very Positive', 59.99, 'A role-playing game.', 18),
+(19, 19, 'Metal Gear Solid V: The Phantom Pain', '2015-09-01', 'Very Positive', 29.99, 'An action-adventure stealth game.', 18),
+(20, 20, 'Call of Duty: Black Ops Cold War', '2020-11-13', 'Mixed', 59.99, 'A first-person shooter game.', 18);
 
-INSERT INTO purchase (user_id, game_id, date_purchased, payment_method, payment_price) VALUES
-(1, 1, '2024-01-01', 'Credit', 9.99),
-(2, 2, '2024-02-01', 'Paypal', 29.99),
-(3, 3, '2024-03-01', 'Steam Wallet', 59.99),
-(4, 4, '2024-04-01', 'Debit', 19.99),
-(5, 5, '2024-05-01', 'Credit', 39.99),
-(6, 6, '2024-06-01', 'Steam Wallet', 39.99),
-(7, 7, '2024-07-01', 'Paypal', 0.00);
+INSERT INTO purchase (user_id, game_id, date_purchased, payment_method)
+VALUES 
+(1, 1, '2021-01-05', 'Credit'),
+(2, 2, '2012-01-15', 'Paypal'),
+(3, 3, '2020-12-01', 'Steam Wallet'),
+(4, 4, '2021-05-10', 'Debit'),
+(5, 5, '2019-11-11', 'Credit'),
+(6, 6, '2020-12-25', 'Paypal'),
+(7, 7, '2018-11-30', 'Debit'),
+(8, 8, '2017-06-14', 'Steam Wallet'),
+(9, 9, '2020-03-12', 'Credit'),
+(10, 10, '2016-04-15', 'Paypal'),
+(11, 11, '2021-06-08', 'Debit'),
+(12, 12, '2021-01-05', 'Credit'),
+(13, 13, '2020-06-20', 'Paypal'),
+(14, 14, '2018-04-25', 'Steam Wallet'),
+(15, 15, '2019-04-01', 'Debit'),
+(16, 16, '2020-11-10', 'Credit'),
+(17, 17, '2018-03-22', 'Paypal'),
+(18, 18, '2020-12-01', 'Steam Wallet'),
+(19, 19, '2015-09-05', 'Debit'),
+(20, 20, '2020-11-15', 'Credit');
 
-INSERT INTO review (user_id, game_id, review_text, rating) VALUES
-(1, 1, 'Amazing game, a classic!', 10),
-(2, 2, 'One of the best RPGs ever!', 10),
-(3, 3, 'Great gameplay and story.', 9),
-(4, 4, 'Incredible open world.', 10),
-(5, 5, 'Timeless classic.', 10),
-(6, 6, 'Fun and competitive.', 8),
-(7, 7, 'A fun free-to-play game.', 7);
+INSERT INTO review (user_id, game_id, review_text, rating)
+VALUES 
+(1, 1, 'Great game but has some bugs.', 4),
+(2, 2, 'Timeless classic, highly recommended!', 5),
+(3, 3, 'Innovative and engaging, a must-play.', 5),
+(4, 4, 'Epic game with a great storyline.', 4),
+(5, 5, 'Amazing graphics and storyline.', 5),
+(6, 6, 'Fun game but expensive.', 3),
+(7, 7, 'Beautiful world and characters.', 4),
+(8, 8, 'Highly addictive and competitive.', 5),
+(9, 9, 'Best free-to-play battle royale.', 4),
+(10, 10, 'Challenging but rewarding.', 5),
+(11, 11, 'Scary and thrilling experience.', 5),
+(12, 12, 'Great story and gameplay.', 4),
+(13, 13, 'Emotional and gripping story.', 5),
+(14, 14, 'Fantastic game with great combat.', 5),
+(15, 15, 'Difficult but satisfying.', 5),
+(16, 16, 'Unique and intriguing.', 4),
+(17, 17, 'Fun with friends.', 3),
+(18, 18, 'Great RPG with a unique style.', 5),
+(19, 19, 'Best stealth game ever.', 5),
+(20, 20, 'Good game but has some bugs.', 3);
 
-INSERT INTO library (user_id, game_id, last_played, time_played) VALUES
-(1, 1, '2024-06-01', 100),
-(2, 2, '2024-06-02', 200),
-(3, 3, '2024-06-03', 150),
-(4, 4, '2024-06-04', 300),
-(5, 5, '2024-06-05', 250),
-(6, 6, '2024-06-06', 180),
-(7, 7, '2024-06-07', 120);
+INSERT INTO library (user_id, game_id, last_played, time_played)
+VALUES 
+(1, 1, '2023-06-01', 120),
+(2, 2, '2023-06-10', 300),
+(3, 3, '2024-01-01', 150),
+(4, 4, '2023-05-01', 200),
+(5, 5, '2023-04-15', 250),
+(6, 6, '2024-02-01', 100),
+(7, 7, '2023-07-01', 180),
+(8, 8, '2024-03-01', 220),
+(9, 9, '2023-08-01', 50),
+(10, 10, '2023-09-01', 270),
+(11, 11, '2023-10-01', 90),
+(12, 12, '2023-11-01', 130),
+(13, 13, '2024-04-01', 300),
+(14, 14, '2024-05-01', 200),
+(15, 15, '2023-12-01', 160),
+(16, 16, '2024-06-01', 120),
+(17, 17, '2023-02-01', 70),
+(18, 18, '2023-03-01', 250),
+(19, 19, '2023-01-01', 180),
+(20, 20, '2023-04-01', 190);
 
-INSERT INTO game_achievement (game_id, lib_id, received_date, achieve_desc, achieve_title) VALUES
-(1, 1, '2024-06-01', 'Complete the first chapter.', 'First Chapter'),
-(2, 2, '2024-06-02', 'Defeat the main boss.', 'Boss Defeated'),
-(3, 3, '2024-06-03', 'Complete all side quests.', 'Side Quest Master'),
-(4, 4, '2024-06-04', 'Reach 100% game completion.', 'Completionist'),
-(5, 5, '2024-06-05', 'Craft 100 items.', 'Master Crafter'),
-(6, 6, '2024-06-06', 'Win 50 matches.', 'Victory'),
-(7, 7, '2024-06-07', 'Achieve level 50.', 'Level 50');
+INSERT INTO game_achievement (game_id, lib_id, received_date, achieve_desc, achieve_title)
+VALUES 
+(1, 1, '2023-06-02', 'Complete the prologue', 'Prologue Master'),
+(2, 2, '2023-06-11', 'Defeat the final boss', 'Dragon Slayer'),
+(3, 3, '2024-01-02', 'Solve all puzzles', 'Puzzle Master'),
+(4, 4, '2023-05-02', 'Complete the main quest', 'Valhalla King'),
+(5, 5, '2023-04-16', 'Complete the game 100%', 'Ultimate Cowboy'),
+(6, 6, '2024-02-02', 'Win the championship', 'Champion'),
+(7, 7, '2023-07-02', 'Complete all side quests', 'Side Quest Hero'),
+(8, 8, '2024-03-02', 'Achieve rank 1', 'Top Player'),
+(9, 9, '2023-08-02', 'Win 10 matches', 'Battle Royale Master'),
+(10, 10, '2023-09-02', 'Complete all levels', 'Level Master'),
+(11, 11, '2023-10-02', 'Find all secrets', 'Secret Finder'),
+(12, 12, '2023-11-02', 'Defeat the main villain', 'Hero'),
+(13, 13, '2024-04-02', 'Complete the story', 'Storyteller'),
+(14, 14, '2024-05-02', 'Max out all stats', 'God of War'),
+(15, 15, '2023-12-02', 'Defeat the hardest boss', 'Sekiro Master'),
+(16, 16, '2024-06-02', 'Deliver all packages', 'Delivery Expert'),
+(17, 17, '2023-02-02', 'Discover all islands', 'Explorer'),
+(18, 18, '2023-03-02', 'Complete the game', 'Dragon Master'),
+(19, 19, '2023-01-02', 'Complete all missions', 'Stealth Master'),
+(20, 20, '2023-04-02', 'Win 10 matches', 'Cold War Veteran');
 
-INSERT INTO game_genres (game_id, genre_id) VALUES
+INSERT INTO game_genres (game_id, genre_id)
+VALUES 
 (1, 1),
-(2, 3),
-(3, 1),
+(2, 1),
+(3, 3),
 (4, 1),
-(5, 3),
-(6, 1),
-(7, 1);
+(5, 1),
+(6, 7),
+(7, 1),
+(8, 3),
+(9, 3),
+(10, 1),
+(11, 9),
+(12, 3),
+(13, 1),
+(14, 1),
+(15, 1),
+(16, 1),
+(17, 1),
+(18, 1),
+(19, 1),
+(20, 3);
