@@ -52,7 +52,6 @@ CREATE TABLE purchase (
     game_id INT,
     date_purchased DATE NOT NULL,
     payment_method ENUM('Steam Wallet', 'Debit', 'Credit', 'Paypal') NOT NULL,
-    payment_price DECIMAL NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user_steam(user_id),
     FOREIGN KEY (game_id) REFERENCES game(game_id)
 );
