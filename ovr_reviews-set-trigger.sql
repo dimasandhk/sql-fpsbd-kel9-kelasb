@@ -22,7 +22,7 @@ BEGIN
         WHERE game_id = NEW.game_id;
     ELSEIF avg_rating >= 3.0 THEN
         UPDATE game
-        SET ovr_reviews = 'Neutral'
+        SET ovr_reviews = 'Mixed'
         WHERE game_id = NEW.game_id;
     ELSEIF avg_rating >= 2.1 THEN
         UPDATE game
