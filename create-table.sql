@@ -79,12 +79,18 @@ CREATE TABLE library (
 CREATE TABLE game_achievement (
     achieve_id INT AUTO_INCREMENT PRIMARY KEY,
     game_id INT,
-    lib_id INT,
-    received_date DATE NOT NULL,
     achieve_desc VARCHAR(100) NOT NULL,
     achieve_title VARCHAR(100) NOT NULL,
-    FOREIGN KEY (game_id) REFERENCES game(game_id),
-    FOREIGN KEY (lib_id) REFERENCES library(lib_id)
+    FOREIGN KEY (game_id) REFERENCES game(game_id)
+);
+
+CREATE TABLE user_achievement (
+	lib_id INT,
+    achieve_id INT,
+    received_date DATE NOT NULL,
+    PRIMARY KEY (lib_id, achieve_id),
+    FOREIGN KEY (lib_id) REFERENCES library(lib_id),
+    FOREIGN KEY (achieve_id) REFERENCES game_achievement(achieve_id)
 );
 
 CREATE TABLE game_genres (
