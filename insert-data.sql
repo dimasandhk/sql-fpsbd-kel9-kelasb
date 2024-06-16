@@ -94,7 +94,7 @@ INSERT INTO game (dev_id, sysreq_id, title, release_date, ovr_reviews, price, de
 VALUES 
 (1, 1, 'Cyberpunk 2077', '2020-12-10', 'Mixed', 59.99, 'An open-world, action-adventure story set in Night City.', 18),
 (2, 2, 'The Elder Scrolls V: Skyrim', '2011-11-11', 'Very Positive', 39.99, 'A legendary open-world RPG.', 18),
-(3, 3, 'Half-Life 2', '2004-11-16', 'Overwhelmingly Positive', 9.99, 'A science fiction first-person shooter game.', 18),
+(3, 3, 'Half-Life 2', '2004-11-16', 'Very Positive', 9.99, 'A science fiction first-person shooter game.', 18),
 (4, 4, 'Assassin\'s Creed Valhalla', '2020-11-10', 'Positive', 59.99, 'An open-world action RPG.', 18),
 (5, 5, 'Red Dead Redemption 2', '2018-10-26', 'Very Positive', 59.99, 'An epic tale of life in America’s unforgiving heartland.', 18),
 (6, 6, 'FIFA 21', '2020-10-09', 'Mixed', 49.99, 'A football simulation video game.', 3),
