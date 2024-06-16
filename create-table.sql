@@ -38,7 +38,7 @@ CREATE TABLE game (
     sysreq_id INT,
     title VARCHAR(100) NOT NULL,
     release_date DATE NOT NULL,
-    ovr_reviews ENUM('Very Positive', 'Positive', 'Mixed', 'Negative', 'Very Negative') NOT NULL,
+    ovr_reviews ENUM('Very Positive', 'Positive', 'Mixed', 'Negative', 'Very Negative'),
     price DECIMAL NOT NULL,
     description TEXT NOT NULL,
     age_rest INT NOT NULL,
