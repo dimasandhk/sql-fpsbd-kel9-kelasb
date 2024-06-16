@@ -74,3 +74,47 @@ BEGIN
 END //
 
 DELIMITER ;
+
+----------------------------------------------------------------------------------------------
+
+DELIMITER //
+
+CREATE PROCEDURE PublishGame(
+    IN DevID INT,
+    IN Title VARCHAR(100),
+    IN ReleaseDate DATE,
+    IN OvrReviews ENUM('Very Positive', 'Positive', 'Mixed', 'Negative', 'Very Negative'),
+    IN Price DECIMAL(10,2),
+    IN Description TEXT,
+    IN AgeRest INT,
+    IN MinOS VARCHAR(100),
+    IN RecomOS VARCHAR(100),
+    IN MinProcessor VARCHAR(100),
+    IN RecomProcessor VARCHAR(100),
+    IN MinMemory INT,
+    IN RecomMemory INT,
+    IN MinGraphics VARCHAR(100),
+    IN RecomGraphics VARCHAR(100),
+    IN MinStorage INT,
+    IN RecomStorage INT
+)
+BEGIN
+    DECLARE SysReqID INT;
+    DECLARE GameID INT;
+
+    -- Insert system requirements
+    INSERT INTO system_requirements (min_os, recom_os, min_processor, recom_processor, min_memory, recom_memory, min_graphics, recom_graphics, min_storage, recom_storage)
+    VALUES (MinOS, RecomOS, MinProcessor, RecomProcessor, MinMemory, RecomMemory, MinGraphics, RecomGraphics, MinStorage, RecomStorage);
+
+    -- Get the inserted system requirements ID
+    SET SysReqID = LAST_INSERT_ID();
+
+    -- Insert game details
+    INSERT INTO game (dev_id, sysreq_id, title, release_date, ovr_reviews, price, description, age_rest)
+    VALUES (DevID, SysReqID, Title, ReleaseDate, OvrReviews, Price, Description, AgeRest);
+
+    -- Get the inserted game ID
+    SET GameID = LAST_INSERT_ID();
+END //
+
+DELIMITER ;
