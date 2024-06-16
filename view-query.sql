@@ -67,3 +67,25 @@ GROUP BY
     sr.min_storage;
 
 ----------------------------------------------------------------------------------------------
+
+CREATE VIEW user_achievements_view AS
+SELECT 
+    us.user_id,
+    us.username,
+    us.email,
+    g.game_id,
+    g.title AS game_title,
+    ga.achieve_id,
+    ga.achieve_title,
+    ga.achieve_desc,
+    ua.received_date
+FROM 
+    user_steam us
+JOIN 
+    library l ON us.user_id = l.user_id
+JOIN 
+    user_achievement ua ON l.lib_id = ua.lib_id
+JOIN 
+    game_achievement ga ON ua.achieve_id = ga.achieve_id
+JOIN 
+    game g ON ga.game_id = g.game_id;

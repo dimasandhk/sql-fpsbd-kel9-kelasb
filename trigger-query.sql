@@ -47,3 +47,30 @@ BEGIN
 END//
 
 DELIMITER ;
+
+-----------------------------------------------------
+
+DELIMITER //
+
+CREATE TRIGGER update_balance_after_purchase
+AFTER INSERT ON purchase
+FOR EACH ROW
+BEGIN
+    DECLARE game_price DECIMAL(10,2);
+
+    -- Check if the payment method is 'Steam Wallet'
+    IF NEW.payment_method = 'Steam Wallet' THEN
+        -- Retrieve the game price
+        SELECT price INTO game_price
+        FROM game
+        WHERE game.game_id = NEW.game_id;
+
+        -- Update the user's balance
+        UPDATE user_steam
+        SET balance = balance - game_price
+        WHERE user_id = NEW.user_id;
+    END IF;
+END //
+
+DELIMITER ;
+
