@@ -89,3 +89,23 @@ JOIN
     game_achievement ga ON ua.achieve_id = ga.achieve_id
 JOIN 
     game g ON ga.game_id = g.game_id;
+
+----------------------------------------------------------------------------------------------
+
+CREATE VIEW user_purchases_view AS
+SELECT 
+    us.user_id,
+    us.username,
+    us.email,
+    p.purchase_id,
+    g.game_id,
+    g.title AS game_title,
+    p.date_purchased,
+    p.payment_method,
+    g.price
+FROM 
+    user_steam us
+JOIN 
+    purchase p ON us.user_id = p.user_id
+JOIN 
+    game g ON p.game_id = g.game_id;
